@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wanneer heb je engineers nodig voor AI? — Dignitas</title>
+<title>Wanneer heb je engineers nodig voor AI? Dignitas</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -200,7 +200,7 @@
   .n4 .uitkomst-bullets li { background:#e0d8f4; color:var(--n4); }
   .n4 .uitkomst-bullets li::before { color:var(--n4); }
 
-  /* VERVOLG STAP — verborgen tot nodig */
+  /* VERVOLG STAP verborgen tot nodig */
   .vervolg { display:none; }
   .vervolg.zichtbaar { display:flex; }
 
@@ -280,6 +280,76 @@
 </head>
 <body>
 
+<!-- WELKOMSTSCHERM -->
+<div id="welkom" style="min-height:100vh;display:flex;flex-direction:column;">
+
+  <div class="header" style="flex-shrink:0;">
+    <div class="header-inner">
+      <div class="header-eyebrow">Dignitas · Praktijkgids AI &amp; Engineering</div>
+      <h1>Je hebt een AI-idee. Wat staat er tussen jou en de <em>implementatie</em>?</h1>
+      <p class="header-sub">Een praktische scan voor iedereen die iets wil bouwen met AI en eerlijk wil weten wat dat vraagt.</p>
+    </div>
+  </div>
+
+  <div class="main" style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+    <div style="max-width:640px;">
+
+      <div style="margin-bottom:28px;">
+        <p style="font-size:16px;font-weight:700;color:var(--blauw);line-height:1.4;margin-bottom:16px;">AI verlaagt de drempel om snel iets te bouwen. Dat is goed. Maar het vergroot ook de kans dat je iets bouwt dat je later niet meer beheerst.</p>
+        <p style="font-size:14px;line-height:1.8;color:var(--subtiel);margin-bottom:12px;">Binnen Dignitas lopen we zelf tegen precies deze vraagstukken aan. Vanuit de behoefte om snel iets te maken, maar ook vanuit onze dagelijkse praktijk in software engineering, security en implementatie. We zien hoeveel goede ideeën vastlopen: niet door gebrek aan ambitie, maar door onderschatting van wat er tussen idee en werkende toepassing zit.</p>
+        <p style="font-size:14px;line-height:1.8;color:var(--subtiel);">Deze scan helpt je die afweging scherp te krijgen. Niet om je ergens naartoe te sturen, maar omdat we vinden dat organisaties goede keuzes moeten kunnen maken: ongeacht of ze daarvoor bij ons uitkomen.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+        <div style="background:var(--wit);border-radius:12px;border:1.5px solid #e0e8f2;padding:18px 20px;">
+          <p style="font-size:32px;font-weight:800;color:var(--blauw);line-height:1;margin-bottom:6px;">28%</p>
+          <p style="font-size:12.5px;font-weight:600;color:var(--tekst);margin-bottom:4px;">haalt volledig de gestelde ROI-doelen</p>
+          <p style="font-size:11.5px;color:var(--subtiel);line-height:1.5;">Dat zegt minder over AI dan over hoe projecten worden opgezet.<br>Bron: Gartner, april 2026</p>
+        </div>
+        <div style="background:var(--wit);border-radius:12px;border:1.5px solid #e0e8f2;padding:18px 20px;">
+          <p style="font-size:32px;font-weight:800;color:var(--paars-mid);line-height:1;margin-bottom:6px;">57%</p>
+          <p style="font-size:12.5px;font-weight:600;color:var(--tekst);margin-bottom:4px;">van IT-managers die al AI inzetten heeft minimaal één mislukking meegemaakt</p>
+          <p style="font-size:11.5px;color:var(--subtiel);line-height:1.5;">Meest genoemde oorzaak: te veel verwacht in te korte tijd. Dit zijn organisaties die al bezig zijn — niet de nog-niet-starters.<br>Bron: Gartner, april 2026</p>
+        </div>
+      </div>
+
+      <div style="background:#f0f4fb;border-radius:12px;border-left:4px solid var(--blauw-mid);padding:18px 20px;margin-bottom:28px;">
+        <p style="font-size:12.5px;font-weight:700;color:var(--blauw);margin-bottom:6px;">Wat wij in de praktijk zien</p>
+        <p style="font-size:13px;line-height:1.75;color:var(--subtiel);">Een AI-idee is snel gebouwd. Soms in een weekend. Maar om er een robuuste, veilige en beheersbare toepassing van te maken gaat een veelvoud aan tijd zitten: het rechtzetten van shortcuts, het inbouwen van wat is overgeslagen en het bewaken van wat ondertussen is doorgegroeid. Dat puinruimen kost meer dan goed beginnen.</p>
+      </div>
+
+      <div style="display:flex;gap:16px;align-items:center;padding:20px 24px;background:var(--wit);border-radius:12px;border:1.5px solid #e0e8f2;margin-bottom:36px;">
+        <div style="font-size:28px;flex-shrink:0;">⏱</div>
+        <div>
+          <p style="font-size:13px;font-weight:700;color:var(--tekst);margin-bottom:2px;">Duurt ongeveer 2 minuten</p>
+          <p style="font-size:12.5px;color:var(--subtiel);line-height:1.5;">Acht vragen. Geen juiste of foute antwoorden. Aan het einde krijg je een concreet beeld van wat jouw situatie vraagt inclusief de risico's en afwegingen die erbij horen.</p>
+        </div>
+      </div>
+
+      <button onclick="startScan()" style="
+        font-family:'Montserrat',sans-serif;
+        font-size:15px;font-weight:800;
+        background:linear-gradient(135deg,var(--blauw),var(--paars-mid));
+        color:#fff;border:none;border-radius:10px;
+        padding:16px 36px;cursor:pointer;
+        box-shadow:0 4px 16px rgba(26,56,99,0.25);
+        transition:opacity 0.15s;
+      " onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+        Start de scan →
+      </button>
+
+      <div style="margin-top:48px;padding-top:24px;border-top:1px solid #e0e8f2;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+        <span style="font-size:12px;font-weight:700;color:var(--subtiel);letter-spacing:1px;text-transform:uppercase;">Dignitas Group</span>
+        <span style="font-size:11.5px;color:var(--subtiel);font-family:'Source Serif 4',Georgia,serif;font-style:italic;">Software Engineering · Security · IT Consultancy</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- BESLISBOOM (verborgen tot start) -->
+<div id="scan" style="display:none;">
+
 <div class="header">
   <div class="header-inner">
     <div class="header-eyebrow">Dignitas · Praktijkgids AI &amp; Engineering</div>
@@ -291,7 +361,7 @@
 <div class="main">
 
   <div class="intro">
-    <p>AI verlaagt de drempel om snel iets te bouwen. <strong>Dat is een kracht én een risico.</strong> De vraag is niet of je AI kunt inzetten — die vraag is allang beantwoord. De vraag is: wat voor aanpak past bij wat je wilt bereiken? En wanneer is "even snel iets bouwen" eigenlijk een probleem dat je alleen later ontdekt.</p>
+    <p>AI verlaagt de drempel om snel iets te bouwen. <strong>Dat is een kracht én een risico.</strong> De vraag is niet of je AI kunt inzetten die vraag is allang beantwoord. De vraag is: wat voor aanpak past bij wat je wilt bereiken? En wanneer is "even snel iets bouwen" eigenlijk een probleem dat je alleen later ontdekt.</p>
   </div>
 
   <div class="boom" id="boom">
@@ -333,7 +403,7 @@
       <div class="stap-body">
         <div class="vraag">
           <h3>Wil je het koppelen aan bestaande systemen, of geautomatiseerd laten draaien?</h3>
-          <p>Denk aan: koppeling met je CRM, ATS, ERP of eigen data. Of een workflow die zelfstandig draait zonder dat jij elke keer een prompt intypt. Zodra je AI koppelt aan andere systemen of het autonoom laat draaien, verandert de complexiteit fundamenteel — ook als je de enige gebruiker blijft.</p>
+          <p>Denk aan: koppeling met je CRM, ATS, ERP of eigen data. Of een workflow die zelfstandig draait zonder dat jij elke keer een prompt intypt. Zodra je AI koppelt aan andere systemen of het autonoom laat draaien, verandert de complexiteit fundamenteel ook als je de enige gebruiker blijft.</p>
         </div>
         <div class="keuzes">
           <button class="keuze nee" onclick="kies('1b', 'nee')">
@@ -351,25 +421,25 @@
         </div>
         <div class="uitkomst n2" id="u1b-risico" style="margin-bottom:12px;">
           <div style="padding:14px 16px;">
-            <p style="font-size:12.5px;font-weight:700;color:var(--n2);margin-bottom:6px;">Let op — ook als je het alleen zelf gebruikt</p>
+            <p style="font-size:12.5px;font-weight:700;color:var(--n2);margin-bottom:6px;">Let op ook als je het alleen zelf gebruikt</p>
             <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;">
               <li style="font-size:12px;color:var(--n2);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Koppelingen maken je afhankelijk van twee systemen tegelijk.</strong> Als de API van het ene systeem wijzigt, ligt jouw workflow plat. Zonder iemand die dat bewaakt merk je het pas als het al mis is.</li>
               <li style="font-size:12px;color:var(--n2);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Geautomatiseerde workflows maken fouten die je niet ziet.</strong> Een workflow die zelfstandig draait heeft geen mens die de output beoordeelt. Fouten stapelen zich op voor je ze ontdekt.</li>
-              <li style="font-size:12px;color:var(--n2);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Technical debt ontstaat ook hier.</strong> Een zelfgebouwde koppeling die "even snel" werkt is over zes maanden een onderhoudsprobleem — zeker als jij de enige bent die begrijpt hoe het werkt.</li>
+              <li style="font-size:12px;color:var(--n2);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Technical debt ontstaat ook hier.</strong> Een zelfgebouwde koppeling die "even snel" werkt is over zes maanden een onderhoudsprobleem zeker als jij de enige bent die begrijpt hoe het werkt.</li>
               <li style="font-size:12px;color:var(--n2);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>De afweging: zelf knutselen of goed bouwen?</strong> Voor een eenmalig experiment: prima zelf doen. Voor iets wat structureel draait en gekoppeld is aan bedrijfssystemen: betrek iemand die de architectuur bewaakt.</li>
             </ul>
           </div>
         </div>
-        <!-- Uitkomst N1 — puur persoonlijk gebruik -->
+        <!-- Uitkomst N1 puur persoonlijk gebruik -->
         <div class="uitkomst n1" id="u1-ja">
           <div class="uitkomst-header">
             <div class="uitkomst-icon">🟢</div>
             <div class="uitkomst-titel">
-              <h4>Niveau 1 — Doe het gewoon zelf</h4>
+              <h4>Niveau 1 Doe het gewoon zelf</h4>
               <span>Geen engineer nodig</span>
             </div>
           </div>
-          <p class="uitkomst-body">Je gebruikt AI als een persoonlijk hulpmiddel. Geen code, geen infrastructuur, geen gedeelde data. Lage inzet, direct resultaat — maar ook persoonlijk gebruik heeft risico's als je niet oppast met wat je invoert.</p>
+          <p class="uitkomst-body">Je gebruikt AI als een persoonlijk hulpmiddel. Geen code, geen infrastructuur, geen gedeelde data. Lage inzet, direct resultaat maar ook persoonlijk gebruik heeft risico's als je niet oppast met wat je invoert.</p>
           <ul class="uitkomst-bullets">
             <li>Gebruik Claude, ChatGPT of Copilot direct in de interface</li>
             <li>Bouw prompts op die voor jou werken en sla ze op</li>
@@ -380,7 +450,7 @@
             <p style="font-size:12.5px;font-weight:700;color:var(--n1);margin-bottom:8px;">Waar je op moet letten</p>
             <p style="font-size:12.5px;color:var(--n1);line-height:1.7;margin-bottom:8px;">Ook niveau 1 is niet risicovrij. De voornaamste valkuilen:</p>
             <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;">
-              <li style="font-size:12px;color:var(--n1);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span>Je voert onbewust toch bedrijfsgevoelige informatie in — namen, projectdetails, klantcontext. Dat gaat naar een externe server.</li>
+              <li style="font-size:12px;color:var(--n1);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span>Je voert onbewust toch bedrijfsgevoelige informatie in namen, projectdetails, klantcontext. Dat gaat naar een externe server.</li>
               <li style="font-size:12px;color:var(--n1);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span>Te veel vertrouwen op de output zonder te checken. AI maakt fouten die er overtuigend uitzien.</li>
               <li style="font-size:12px;color:var(--n1);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span>Geen audit trail. Als iemand later vraagt hoe een besluit tot stand is gekomen, heb je niks om op terug te vallen.</li>
               <li style="font-size:12px;color:var(--n1);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span>Persoonlijk gebruik groeit ongemerkt uit tot iets structureels. Check regelmatig: gebruik ik dit nog steeds alleen zelf?</li>
@@ -399,7 +469,7 @@
       <div class="stap-body">
         <div class="vraag">
           <h3>Verwerkt het gevoelige of bedrijfskritische informatie?</h3>
-          <p>Denk aan: klantgegevens, personeelsinformatie, financiële data, contracten, of andere informatie die niet zomaar buiten de organisatie mag. Zodra dit het geval is, verandert de juridische en technische vereisten fundamenteel — ongeacht hoe simpel de toepassing lijkt.</p>
+          <p>Denk aan: klantgegevens, personeelsinformatie, financiële data, contracten, of andere informatie die niet zomaar buiten de organisatie mag. Zodra dit het geval is, verandert de juridische en technische vereisten fundamenteel ongeacht hoe simpel de toepassing lijkt.</p>
         </div>
         <div class="keuzes">
           <button class="keuze nee" onclick="kies(2, 'nee')">
@@ -452,23 +522,23 @@
               <span>Voordat je verder bouwt</span>
             </div>
           </div>
-          <p class="uitkomst-body">Dit is geen technisch detail — het is een juridische en organisatorische vraag. Zodra meerdere mensen een AI-toepassing gebruiken, ben je verantwoordelijk voor wat er met die data gebeurt. Dat geldt ook als je "gewoon een platform gebruikt."</p>
+          <p class="uitkomst-body">Dit is geen technisch detail het is een juridische en organisatorische vraag. Zodra meerdere mensen een AI-toepassing gebruiken, ben je verantwoordelijk voor wat er met die data gebeurt. Dat geldt ook als je "gewoon een platform gebruikt."</p>
           <ul class="uitkomst-bullets">
             <li>Verwerkt het namen, rollen, of organisatiegegevens? Dan val je onder de AVG</li>
-            <li>Veel AI-platforms gebruiken inputdata standaard voor modeltraining — check de instellingen</li>
+            <li>Veel AI-platforms gebruiken inputdata standaard voor modeltraining check de instellingen</li>
             <li>Een gedeeld account is geen veilige omgeving: iedereen ziet elkaars context</li>
             <li>Regel eerst een verwerkersovereenkomst of kies een platform met enterprise-privacygaranties</li>
-            <li>Betrek je security-afdeling voordat je verder gaat — niet erna</li>
+            <li>Betrek je security-afdeling voordat je verder gaat niet erna</li>
           </ul>
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;">
-            <a href="mailto:info@dignitas.nl" style="
+            <button onclick="securityDoorgaan()" style="
               display:inline-flex;align-items:center;gap:8px;
-              background:var(--blauw);color:#fff;
+              background:var(--blauw);color:#fff;border:none;
               border-radius:8px;padding:11px 18px;
               font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;
-              text-decoration:none;transition:background 0.15s;">
-              📩 Ik regel dit later — help me verder
-            </a>
+              cursor:pointer;transition:opacity 0.15s;">
+              Ik regel dit later — ga toch verder
+            </button>
             <button onclick="securityDoorgaan()" style="
               display:inline-flex;align-items:center;gap:8px;
               background:var(--wit);border:1.5px solid #e8c080;
@@ -490,7 +560,7 @@
       </div>
       <div class="stap-body">
         <div class="vraag">
-          <h3>Moet het over zes maanden nog werken — en door iemand anders beheerd kunnen worden?</h3>
+          <h3>Moet het over zes maanden nog werken en door iemand anders beheerd kunnen worden?</h3>
           <p>Denk aan: het wordt een structureel onderdeel van een werkproces. Niet eenmalig, maar iets wat blijft draaien. Dit is een cruciale vraag omdat veel AI-toepassingen beginnen als tijdelijk experiment en ongemerkt kritisch worden. Op het moment dat je afhankelijk bent, is het te laat om er alsnog goed over na te denken.</p>
         </div>
         <div class="keuzes">
@@ -512,21 +582,21 @@
           <div class="uitkomst-header">
             <div class="uitkomst-icon">🔵</div>
             <div class="uitkomst-titel">
-              <h4>Niveau 2 — Gestructureerde AI-workflow</h4>
+              <h4>Niveau 2 Gestructureerde AI-workflow</h4>
               <span>Geen code, wel inrichting en beheer</span>
             </div>
           </div>
           <p class="uitkomst-body">Je bouwt een AI-workflow die meerdere mensen gebruiken, maar het is tijdelijk of kleinschalig genoeg om zonder ontwikkeltraject te laten werken. Denk aan een multiagent-setup in een platform als Claude.ai of een no-code tool.</p>
           <ul class="uitkomst-bullets">
-            <li>Werkt prima in een platform — mits goed ingericht</li>
+            <li>Werkt prima in een platform mits goed ingericht</li>
             <li>Iemand moet eigenaar zijn: wie beheert en beoordeelt de outputs?</li>
             <li>Documenteer wat je hebt gebouwd zodat het overdraagbaar is</li>
             <li>Zet een evaluatiemoment op na drie maanden</li>
           </ul>
           <div style="margin-top:16px;padding:16px 18px;background:#d4ecf8;border-radius:10px;border:1.5px solid #8cc4e0;">
-            <p style="font-size:12.5px;font-weight:700;color:var(--n2);margin-bottom:8px;">Waar je op moet letten — en welke afwegingen je moet maken</p>
+            <p style="font-size:12.5px;font-weight:700;color:var(--n2);margin-bottom:8px;">Waar je op moet letten en welke afwegingen je moet maken</p>
             <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;">
-              <li style="font-size:12px;color:var(--n2);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Licentiekosten en lock-in.</strong> Je bouwt op een extern platform. Het werkt, het groeit — en op het moment dat de kosten verdrievoudigen heb je geen uitweg meer. Platform-afhankelijkheid groeit stiller dan je denkt.</li>
+              <li style="font-size:12px;color:var(--n2);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Licentiekosten en lock-in.</strong> Je bouwt op een extern platform. Het werkt, het groeit en op het moment dat de kosten verdrievoudigen heb je geen uitweg meer. Platform-afhankelijkheid groeit stiller dan je denkt.</li>
               <li style="font-size:12px;color:var(--n2);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Het gedrocht-risico.</strong> Een workflow die maandenlang gepatcht wordt via prompts en workarounds is op een gegeven moment onbeheersbaar. Niemand snapt meer waarom het werkt. Aanpassingen breken dingen.</li>
               <li style="font-size:12px;color:var(--n2);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Eigenaarschap.</strong> Wie is verantwoordelijk als de output niet klopt? Als het in het account van één persoon leeft, verdwijnt het beheer met haar mee.</li>
               <li style="font-size:12px;color:var(--n2);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>De afweging: platform of eigen omgeving?</strong> Een eigen omgeving kost meer aan het begin maar geeft controle over kosten en architectuur op termijn. Naarmate de workflow groeit of kritischer wordt, verschuift de balans.</li>
@@ -546,7 +616,7 @@
       <div class="stap-body">
         <div class="vraag">
           <h3>Verwacht je veel gebruikers, meerdere teams, of complexe systeem-integraties?</h3>
-          <p>Denk aan: tientallen of meer gebruikers, koppelingen met meerdere enterprise-systemen tegelijk, of een toepassing die kritisch is voor meerdere afdelingen of bedrijfsprocessen. Schaal en complexiteit vragen om een andere aanpak — ook als er altijd een mens controleert.</p>
+          <p>Denk aan: tientallen of meer gebruikers, koppelingen met meerdere enterprise-systemen tegelijk, of een toepassing die kritisch is voor meerdere afdelingen of bedrijfsprocessen. Schaal en complexiteit vragen om een andere aanpak ook als er altijd een mens controleert.</p>
         </div>
         <div class="keuzes">
           <button class="keuze nee" onclick="kies(4, 'nee')">
@@ -574,7 +644,7 @@
       <div class="stap-body">
         <div class="vraag">
           <h3>Neemt de toepassing beslissingen of acties zonder dat iemand elke stap controleert?</h3>
-          <p>Denk aan: automatisch versturen van berichten, genereren van documenten die direct naar buiten gaan, of verwerken van data zonder tussenstap voor menselijke controle. Dit is het kantelpunt waarop fouten direct gevolgen hebben — en waarop aansprakelijkheid een reële vraag wordt.</p>
+          <p>Denk aan: automatisch versturen van berichten, genereren van documenten die direct naar buiten gaan, of verwerken van data zonder tussenstap voor menselijke controle. Dit is het kantelpunt waarop fouten direct gevolgen hebben en waarop aansprakelijkheid een reële vraag wordt.</p>
         </div>
         <div class="keuzes">
           <button class="keuze nee" onclick="kies('4b', 'nee')">
@@ -594,12 +664,12 @@
         <!-- Niveau 3 tussenstap: doorvragen -->
         <div class="uitkomst n3" id="u4-nee" style="background:transparent;border:none;padding:0;">
           <div style="background:var(--n3-bg);border:1.5px solid #e8c080;border-radius:12px;padding:18px 22px;margin-bottom:16px;">
-            <p style="font-size:13.5px;font-weight:700;color:var(--n3);margin-bottom:4px;">Niveau 3 — Je hebt AI software engineering capaciteit nodig.</p>
+            <p style="font-size:13.5px;font-weight:700;color:var(--n3);margin-bottom:4px;">Niveau 3 Je hebt AI software engineering capaciteit nodig.</p>
             <p style="font-size:13px;color:var(--n3);opacity:0.85;line-height:1.6;margin-bottom:12px;">Geen heel team, maar wel één tot drie mensen die de code begrijpen en de architectuur bewaken. Twee vervolgvragen bepalen welke aanpak het beste past.</p>
             <div style="padding:14px 16px;background:#fde8bc;border-radius:8px;">
-              <p style="font-size:12.5px;font-weight:700;color:var(--n3);margin-bottom:6px;">Waar je op moet letten — en welke afwegingen je moet maken</p>
+              <p style="font-size:12.5px;font-weight:700;color:var(--n3);margin-bottom:6px;">Waar je op moet letten en welke afwegingen je moet maken</p>
               <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;">
-                <li style="font-size:12px;color:var(--n3);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Gegenereerde code is geen veilige code.</strong> AI produceert werkende code — maar ook code met beveiligingslekken, slechte foutafhandeling en geen testdekking. Iemand moet dit lezen en bewaken.</li>
+                <li style="font-size:12px;color:var(--n3);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Gegenereerde code is geen veilige code.</strong> AI produceert werkende code maar ook code met beveiligingslekken, slechte foutafhandeling en geen testdekking. Iemand moet dit lezen en bewaken.</li>
                 <li style="font-size:12px;color:var(--n3);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Technical debt stapelt snel.</strong> Snelle AI-iteraties zonder architectuurkeuzes leiden tot een codebase die niemand meer durft aan te raken. Hoe eerder je dit bewaakt, hoe goedkoper het is.</li>
                 <li style="font-size:12px;color:var(--n3);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Afhankelijkheid van één persoon.</strong> Als de enige die het begrijpt vertrekt, heb je een black box. Zorg voor overdraagbaarheid van dag één.</li>
                 <li style="font-size:12px;color:var(--n3);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>De afweging: extern, deta-vast of coaching?</strong> Wil je snel resultaat of wil je dat de kennis intern blijft? Dat bepaalt de route. Zie de opties hieronder.</li>
@@ -669,7 +739,7 @@
           <div class="uitkomst-header">
             <div class="uitkomst-icon">🟡</div>
             <div class="uitkomst-titel">
-              <h4>Niveau 3 — Jouw aanpak op maat</h4>
+              <h4>Niveau 3 Jouw aanpak op maat</h4>
               <span>Op basis van jullie situatie</span>
             </div>
           </div>
@@ -684,22 +754,22 @@
           <div class="uitkomst-header">
             <div class="uitkomst-icon">🟣</div>
             <div class="uitkomst-titel">
-              <h4>Niveau 4 — Engineering team nodig</h4>
+              <h4>Niveau 4 Engineering team nodig</h4>
               <span>Schaal, integraties, enterprise-eisen</span>
             </div>
           </div>
-          <p class="uitkomst-body">Je bouwt een toepassing die zelfstandig beslissingen neemt of acties uitvoert, met gevoelige data, voor meerdere gebruikers. Dit is software engineering — geen AI-experiment. De risico's zijn reëel en vragen om structuur, tests en verantwoording.</p>
+          <p class="uitkomst-body">Je bouwt een toepassing die zelfstandig beslissingen neemt of acties uitvoert, met gevoelige data, voor meerdere gebruikers. Dit is software engineering geen AI-experiment. De risico's zijn reëel en vragen om structuur, tests en verantwoording.</p>
           <ul class="uitkomst-bullets">
             <li>Je hebt architectuur nodig: security, dataopslag, audit trail</li>
-            <li>Foutafhandeling is geen bijzaak — wat gebeurt er als AI het fout heeft?</li>
+            <li>Foutafhandeling is geen bijzaak wat gebeurt er als AI het fout heeft?</li>
             <li>Wie is aansprakelijk voor een fout besluit door de toepassing?</li>
             <li>Dit vraagt om een team: engineering, security, en een product owner</li>
             <li>Start met een grondige scopedefinitie voor je ook maar één regel code schrijft</li>
           </ul>
           <div style="margin-top:16px;padding:16px 18px;background:#e0d8f4;border-radius:10px;border:1.5px solid #b8a8e0;">
-            <p style="font-size:12.5px;font-weight:700;color:var(--n4);margin-bottom:8px;">Waar je op moet letten — en welke afwegingen je moet maken</p>
+            <p style="font-size:12.5px;font-weight:700;color:var(--n4);margin-bottom:8px;">Waar je op moet letten en welke afwegingen je moet maken</p>
             <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:5px;">
-              <li style="font-size:12px;color:var(--n4);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Autonome beslissingen vragen om een fallback.</strong> Wat gebeurt er als de AI een fout maakt? Wie detecteert dat, hoe snel, en wie herstelt het? Bouw dit in van dag één — niet als nagedachte.</li>
+              <li style="font-size:12px;color:var(--n4);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Autonome beslissingen vragen om een fallback.</strong> Wat gebeurt er als de AI een fout maakt? Wie detecteert dat, hoe snel, en wie herstelt het? Bouw dit in van dag één niet als nagedachte.</li>
               <li style="font-size:12px;color:var(--n4);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Aansprakelijkheid is niet vanzelfsprekend.</strong> Wie is verantwoordelijk als de toepassing een fout besluit neemt met gevolgen? Dat is een juridische vraag die je vooraf moet beantwoorden.</li>
               <li style="font-size:12px;color:var(--n4);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>Scope-creep is het grootste risico.</strong> "We voegen er nog even X aan toe" is hoe projecten vastlopen. Een strakke scopedefinitie en een product owner die nee durft te zeggen zijn essentieel.</li>
               <li style="font-size:12px;color:var(--n4);display:flex;gap:6px;"><span style="font-weight:700;flex-shrink:0;">→</span><strong>De afweging: volledig extern of samen bouwen?</strong> Een extern team levert snel, maar kennis verdwijnt mee als het project klaar is. Samen bouwen kost meer coördinatie, maar geeft interne continuïteit. Wat weegt zwaarder?</li>
@@ -708,8 +778,8 @@
           </div>
           <div style="margin-top:18px;padding:16px 18px;background:rgba(74,45,122,0.08);border-radius:10px;border:1.5px solid #c8b8e8;">
             <p style="font-size:13px;font-weight:700;color:var(--n4);margin-bottom:6px;">Samenwerking met jullie team is ook hier een optie.</p>
-            <p style="font-size:12.5px;color:var(--subtiel);line-height:1.7;margin-bottom:10px;">Dignitas kan het volledige team leveren, maar ook samenwerken met jullie interne engineers — inclusief deta-vast profielen die langdurig in de organisatie meedraaien.</p>
-            <p style="font-size:12.5px;color:var(--subtiel);line-height:1.7;margin-bottom:10px;">Een aandachtspunt dat we vaak tegenkomen: de druk binnen bestaande engineering teams is hoog. AI-ontwikkeling erbij schuiven op een al vol bord werkt zelden goed. Het kan effectiever zijn om een separaat team op te zetten dat zich volledig richt op deze ontwikkeling — en na afloop over te dragen aan het bestaande team voor onderhoud en doorontwikkeling.</p>
+            <p style="font-size:12.5px;color:var(--subtiel);line-height:1.7;margin-bottom:10px;">Dignitas kan het volledige team leveren, maar ook samenwerken met jullie interne engineers inclusief deta-vast profielen die langdurig in de organisatie meedraaien.</p>
+            <p style="font-size:12.5px;color:var(--subtiel);line-height:1.7;margin-bottom:10px;">Een aandachtspunt dat we vaak tegenkomen: de druk binnen bestaande engineering teams is hoog. AI-ontwikkeling erbij schuiven op een al vol bord werkt zelden goed. Het kan effectiever zijn om een separaat team op te zetten dat zich volledig richt op deze ontwikkeling en na afloop over te dragen aan het bestaande team voor onderhoud en doorontwikkeling.</p>
             <p style="font-size:12.5px;color:var(--subtiel);line-height:1.7;">Wat de juiste structuur is hangt af van jullie situatie. Dat is precies het gesprek we graag voeren.</p>
           </div>
         </div>
@@ -727,7 +797,7 @@
         <h3 style="font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;line-height:1.25;">Wil je sparren over jouw situatie?</h3>
         <p style="font-size:13px;color:rgba(255,255,255,0.70);line-height:1.65;margin-bottom:24px;">We nemen binnen één werkdag contact op. We nemen je antwoorden mee zodat je niet opnieuw hoeft uit te leggen waar je staat.</p>
 
-        <!-- HubSpot embed komt hier — placeholder form -->
+        <!-- HubSpot embed komt hier placeholder form -->
         <form id="contact-form" onsubmit="verstuurForm(event)" style="display:flex;flex-direction:column;gap:12px;">
           <input type="hidden" id="contact-context" name="context" value="">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
@@ -775,7 +845,7 @@
         <div id="contact-bevestiging" style="display:none;text-align:center;padding:24px 0;">
           <p style="font-size:28px;margin-bottom:12px;">✓</p>
           <p style="font-size:16px;font-weight:700;color:#fff;margin-bottom:6px;">Ontvangen. We nemen snel contact op.</p>
-          <p style="font-size:13px;color:rgba(255,255,255,0.65);">Check je inbox — je ontvangt ook een bevestiging per mail.</p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.65);">Check je inbox je ontvangt ook een bevestiging per mail.</p>
         </div>
       </div>
     </div>
@@ -789,32 +859,39 @@
       <div class="legenda-item" style="background:#e8f5ee;">
         <div class="legenda-dot" style="background:#2d7a4f;"></div>
         <div class="legenda-tekst">
-          <strong style="color:#2d7a4f;">Niveau 1 — Doe het zelf</strong>
+          <strong style="color:#2d7a4f;">Niveau 1 Doe het zelf</strong>
           <span style="color:#2d7a4f;">Claude, ChatGPT, Copilot. Geen code, geen gedeelde data, weinig risico.</span>
         </div>
       </div>
       <div class="legenda-item" style="background:#e3f0fb;">
         <div class="legenda-dot" style="background:#1a5c8a;"></div>
         <div class="legenda-tekst">
-          <strong style="color:#1a5c8a;">Niveau 2 — AI-workflow</strong>
+          <strong style="color:#1a5c8a;">Niveau 2 AI-workflow</strong>
           <span style="color:#1a5c8a;">Multiagent, platform, no-code. Wel inrichting en eigenaarschap nodig.</span>
         </div>
       </div>
       <div class="legenda-item" style="background:#fdf0dc;">
         <div class="legenda-dot" style="background:#b36b10;"></div>
         <div class="legenda-tekst">
-          <strong style="color:#b36b10;">Niveau 3 — AI software engineer(s)</strong>
+          <strong style="color:#b36b10;">Niveau 3 AI software engineer(s)</strong>
           <span style="color:#b36b10;">Één tot drie mensen die de code begrijpen en de architectuur bewaken.</span>
         </div>
       </div>
       <div class="legenda-item" style="background:#ede8f8;">
         <div class="legenda-dot" style="background:#4a2d7a;"></div>
         <div class="legenda-tekst">
-          <strong style="color:#4a2d7a;">Niveau 4 — Engineering team</strong>
+          <strong style="color:#4a2d7a;">Niveau 4 Engineering team</strong>
           <span style="color:#4a2d7a;">Schaal, integraties, autonome beslissingen. Software engineering.</span>
         </div>
       </div>
     </div>
+  </div>
+
+  <div style="margin-top:32px;background:#f5f0fb;border-radius:14px;padding:28px 32px;border:1.5px solid #ddd0f0;">
+    <p style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--paars-mid);margin-bottom:16px;">En de mensen achter de technologie?</p>
+    <p style="font-size:13.5px;font-weight:700;color:var(--paars);line-height:1.4;margin-bottom:12px;">Developers willen bouwen, oplossen en groeien. Als AI dat verdringt in plaats van versterkt, verlies je motivatie, vakmanschap en uiteindelijk je beste mensen.</p>
+    <p style="font-size:13px;line-height:1.75;color:var(--subtiel);margin-bottom:12px;">Uit de Stack Overflow Developer Survey 2025 onder 49.000 developers blijkt dat de belangrijkste drijfveren voor werkplezier zijn: autonomie, vertrouwen en het oplossen van echte problemen. AI-integratie staat op de op-een-na-laatste plek als reden om een technologie te omarmen.</p>
+    <p style="font-size:13px;line-height:1.75;color:var(--subtiel);">Dit is een aspect dat Dignitas actief meeneemt in de inzet van AI binnen organisaties. Niet als vervanging van engineers, maar als instrument dat hun werk beter en waardevoller maakt. Wie dat negeert bouwt misschien sneller, maar verliest op termijn de mensen die het moeten onderhouden en doorontwikkelen.</p>
   </div>
 
   <div class="footer">
@@ -823,6 +900,7 @@
   </div>
 
 </div><!-- /main -->
+</div><!-- /scan -->
 
 <script>
   const state = { stap1:null, stap1b:null, stap2:null, stap2b:null, stap3:null, stap4:null, stap4b:null, stap5:null, stap6:null };
@@ -833,7 +911,7 @@
     '3A': {
       tag:'Extern', titel:'Senior AI consultant (extern)',
       tekst:'Eén of twee externe AI software engineers die bouwen en bewaken. Geen deta-vast, geen langdurige binding. Snel op te starten, gericht resultaat.',
-      bullets:['Hands-on bouwen én adviseren over architectuur','Bewaakt codekwaliteit en security','Schaalbaar op- en afschalen naar behoefte','Resultaat staat snel — geen interne leercurve']
+      bullets:['Hands-on bouwen én adviseren over architectuur','Bewaakt codekwaliteit en security','Schaalbaar op- en afschalen naar behoefte','Resultaat staat snel geen interne leercurve']
     },
     '3B': {
       tag:'Deta-vast', titel:'Deta-vast junior + senior consultant',
@@ -847,7 +925,7 @@
     },
     '3D': {
       tag:'Meebouwen', titel:'Meebouwen en overdragen',
-      tekst:'Dignitas bouwt het op samen met jullie team — met als expliciet doel het over te dragen. Niet alleen coaching, maar ook echt de handen uit de mouwen.',
+      tekst:'Dignitas bouwt het op samen met jullie team met als expliciet doel het over te dragen. Niet alleen coaching, maar ook echt de handen uit de mouwen.',
       bullets:['Combinatie van bouwen én kennisoverdracht','Intern team leert al doende','Duidelijke overdrachtsstructuur van begin af aan','Sterkste optie als je continuïteit én kwaliteit wilt']
     }
   };
@@ -861,10 +939,10 @@
   }
 
   const niveauLabels = {
-    'n1': 'Niveau 1 — Doe het zelf',
-    'n2': 'Niveau 2 — Gestructureerde AI-workflow',
-    'n3': 'Niveau 3 — AI software engineer(s)',
-    'n4': 'Niveau 4 — Engineering team',
+    'n1': 'Niveau 1 Doe het zelf',
+    'n2': 'Niveau 2 Gestructureerde AI-workflow',
+    'n3': 'Niveau 3 AI software engineer(s)',
+    'n4': 'Niveau 4 Engineering team',
     'security': 'Security-check vereist (nog niet doorgelopen)'
   };
 
@@ -884,7 +962,7 @@
     const niveauTekst = niveauLabels[niveau] || niveau;
     const routesTekst = geselecteerdeRoutes && geselecteerdeRoutes.length
       ? geselecteerdeRoutes.map(k => routes[k]?.titel || k).join(', ')
-      : '—';
+      : 'n.v.t.';
 
     const antwoorden = Object.entries(stapLabels)
       .filter(([k]) => state[k] !== null)
@@ -950,10 +1028,10 @@
     if (stap === 1) {
       alleIds.forEach(id => hide(id));
       if (antwoord === 'ja') {
-        // Alleen zelf — check eerst op integraties/automatisering
+        // Alleen zelf check eerst op integraties/automatisering
         show('stap1b'); scroll('stap1b');
       } else {
-        // Anderen gebruiken het ook — door naar stap 2
+        // Anderen gebruiken het ook door naar stap 2
         show('stap2'); scroll('stap1');
       }
     }
@@ -1024,21 +1102,6 @@
       toonRoutes();
     }
   }
-      } else {
-        show('u4-nee'); show('stap5'); scroll('stap5');
-      }
-    }
-
-    if (stap === 5) {
-      ['stap6','routes-container','reset-wrap'].forEach(id=>hide(id));
-      show('stap6'); scroll('stap6');
-    }
-
-    if (stap === 6) {
-      hide('routes-container'); hide('reset-wrap');
-      toonRoutes();
-    }
-  }
 
   function show(id) {
     const el = document.getElementById(id);
@@ -1063,6 +1126,16 @@
     Object.keys(state).forEach(k => state[k] = null);
     window.scrollTo({top:0, behavior:'smooth'});
   }
+  // Globaal beschikbaar maken voor onclick handlers
+  window.kies = kies;
+  window.reset = reset;
+  window.securityDoorgaan = securityDoorgaan;
+  window.verstuurForm = verstuurForm;
+  window.startScan = function() {
+    document.getElementById('welkom').style.display = 'none';
+    document.getElementById('scan').style.display = 'block';
+    window.scrollTo({top:0, behavior:'smooth'});
+  };
 </script>
 </body>
 </html>
