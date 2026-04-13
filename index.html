@@ -954,31 +954,31 @@
         show('stap1b'); scroll('stap1b');
       } else {
         // Anderen gebruiken het ook — door naar stap 2
-        show('stap2'); scroll('stap2');
+        show('stap2'); scroll('stap1');
       }
     }
 
     if (stap === '1b') {
-      ['u1-ja','u1b-risico','stap2','stap2b','stap3','stap4','stap5','stap6','u2b-nee','u3-nee','u4-nee','u4-ja','routes-container','contact-blok','reset-wrap'].forEach(id=>hide(id));
+      ['u1-ja','u1b-risico','stap2','stap2b','stap3','stap4','stap4b','stap5','stap6','u2b-nee','u3-nee','u4-nee','u4-ja','routes-container','contact-blok','reset-wrap'].forEach(id=>hide(id));
       if (antwoord === 'nee') {
         show('u1-ja');
         document.getElementById('reset-wrap').style.display='block';
         setTimeout(() => toonContactForm('n1', null), 600);
       } else {
         show('u1b-risico');
-        show('stap2'); scroll('stap2');
+        show('stap2'); scroll('u1b-risico');
       }
     }
 
     if (stap === 2) {
       ['stap2b','stap3','stap4','stap4b','stap5','stap6','u2b-nee','u3-nee','u4-nee','u4-ja','routes-container','reset-wrap'].forEach(id=>hide(id));
-      show('stap2b'); scroll('stap2b');
+      show('stap2b'); scroll('stap2');
     }
 
     if (stap === '2b') {
       ['stap3','stap4','stap4b','stap5','stap6','u2b-nee','u3-nee','u4-nee','u4-ja','routes-container','reset-wrap'].forEach(id=>hide(id));
-      if (antwoord === 'nee') { show('u2b-nee'); document.getElementById('reset-wrap').style.display='block'; }
-      else { show('stap3'); scroll('stap3'); }
+      if (antwoord === 'nee') { show('u2b-nee'); document.getElementById('reset-wrap').style.display='block'; scroll('u2b-nee'); }
+      else { show('stap3'); scroll('stap2b'); }
     }
 
     if (stap === 3) {
@@ -987,32 +987,43 @@
         show('u3-nee');
         document.getElementById('reset-wrap').style.display='block';
         setTimeout(() => toonContactForm('n2', null), 600);
-      } else { show('stap4'); scroll('stap4'); }
+      } else { show('stap4'); scroll('stap3'); }
     }
 
     if (stap === 4) {
-      // Schaalvraag
       ['stap4b','stap5','stap6','u4-nee','u4-ja','routes-container','contact-blok','reset-wrap'].forEach(id=>hide(id));
       if (antwoord === 'ja') {
-        // Grote schaal = direct niveau 4
         show('u4-ja');
         document.getElementById('reset-wrap').style.display='block';
         scroll('u4-ja');
         setTimeout(() => toonContactForm('n4', null), 600);
       } else {
-        // Kleine schaal — door naar autonomie-vraag
-        show('stap4b'); scroll('stap4b');
+        show('stap4b'); scroll('stap4');
       }
     }
 
     if (stap === '4b') {
-      // Autonomie-vraag
       ['stap5','stap6','u4-nee','u4-ja','routes-container','contact-blok','reset-wrap'].forEach(id=>hide(id));
       if (antwoord === 'ja') {
         show('u4-ja');
         document.getElementById('reset-wrap').style.display='block';
         scroll('u4-ja');
         setTimeout(() => toonContactForm('n4', null), 600);
+      } else {
+        show('u4-nee'); show('stap5'); scroll('stap4b');
+      }
+    }
+
+    if (stap === 5) {
+      ['stap6','routes-container','reset-wrap'].forEach(id=>hide(id));
+      show('stap6'); scroll('stap5');
+    }
+
+    if (stap === 6) {
+      hide('routes-container'); hide('reset-wrap');
+      toonRoutes();
+    }
+  }
       } else {
         show('u4-nee'); show('stap5'); scroll('stap5');
       }
